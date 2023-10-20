@@ -7,5 +7,8 @@ edition = "2021"
 
 [dependencies]
 actix-web = "4.4.0"
+config = { version = "0.13", default-features = false, features = ["yaml"] }
 reqwest = "0.11.22"
+serde = {version = "1.0.189", features = ["serde_derive"] }
+sqlx = {version = "0.5.7", default-features = false, features = [ "runtime-actix-rustls", "macros", "postgres", "uuid", "chrono", "migrate"] }
 tokio = { version = "1.33.0", features = ["macros", "rt-multi-thread"] }
